@@ -1,0 +1,67 @@
+.knowledge__container{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5em;
+    
+}
+
+.knowledge__container h1{
+    background: -webkit-linear-gradient(180deg, #aef4c5 0, #9cedc1 16.67%, #87e4bc 33.33%, #6cd8b4 50%, #4dccad 66.67%, #24c3aa 83.33%, #00bba9 100%);
+    background: linear-gradient(180deg, #aef4c5 0, #9cedc1 16.67%, #87e4bc 33.33%, #6cd8b4 50%, #4dccad 66.67%, #24c3aa 83.33%, #00bba9 100%);
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+
+.tools_container{
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 3em;
+}
+
+.items_container{
+    background-image: linear-gradient(145deg, #aaf3c5 0, #99ecc1 16.67%, #85e3bb 33.33%, #6cd8b4 50%, #4fcdae 66.67%, #2cc4aa 83.33%, #00bda9 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    border-radius: 5px;
+    position: relative;
+
+}
+
+.items_container::after{
+    content:"";
+    display: block;
+    width: 0;
+    height: 5px;
+    background-color: cyan;
+    position: absolute;
+    bottom:0;
+    transition: all .3s;
+    
+
+} 
+
+.items_container:hover::after{
+    width: 100%;
+}
+
+.logo{
+    font-size: 2.5em;
+}
+
+
+@media screen and (max-width:500px){
+    .items_container{
+        grid-column: 1/-1;
+    }
+}
